@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+checkpoints_2/
+checkpoints_4/
+checkpoints_8/
+checkpoints_16/
+datasets/
+.idea/
+__pycache__/
+icpc.condoe
+final results/
+bootstrap_wo_gru.sh
+

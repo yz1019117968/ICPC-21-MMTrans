@@ -1,0 +1,6 @@
+executable = bootstrap_wo_gru.sh
+error      = icpc.err
+log        = icpc.log
+output     = icpc.out
+queue
+
