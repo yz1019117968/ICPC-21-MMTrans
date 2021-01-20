@@ -9,10 +9,10 @@ from modules.EncoderSBT import EncoderSBT
 from modules.Decoder import Decoder
 from modules.EncoderGraph import EncoderGraph
 
-class TransformerYZ(tf.keras.Model):
+class MMTrans(tf.keras.Model):
     def __init__(self, num_layers, d_model, num_heads, dff, srcs_vocab_size, graphs_vocab_size, asthop,
                comms_vocab_size, pe_srcs, pe_graphs, pe_comms, rate):
-        super(TransformerYZ, self).__init__()
+        super(MMTrans, self).__init__()
         self.encoder_sbt = EncoderSBT(num_layers, d_model, num_heads, dff,
                                srcs_vocab_size, pe_srcs, rate)
         self.encoder_graph = EncoderGraph(num_layers, d_model, num_heads, dff,

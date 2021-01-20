@@ -13,15 +13,10 @@ import random
 BUFFER_SIZE = 20000
 # TODO: if you're going to show the generated comments one by one, change the batch_size to 1
 # TODO: in normal evaluation, the batch_size = 100
-BATCH_SIZE = 1
+BATCH_SIZE = 100
 MAX_LENGTH_SBT = 602
 MAX_LENGTH_NODE = 200
 MAX_LENGTH_COMM = 22
-
-# def filter_max_length(sbt, node, edge, comm, max_length_seq=MAX_LENGTH_SEQ, max_length_node = MAX_LENGTH_NODE,
-#                       max_length_comm=MAX_LENGTH_COMM):
-#     return tf.logical_and(tf.logical_and(tf.size(sbt) <= max_length_seq, tf.size(node) <= max_length_node),
-#                             tf.size(comm) <= max_length_comm)
 
 def cut_if_longer(sbt_seq, node, edge, comm):
   if tf.size(sbt_seq) > MAX_LENGTH_SBT: # only slice if longer

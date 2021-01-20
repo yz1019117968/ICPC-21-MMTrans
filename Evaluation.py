@@ -4,7 +4,7 @@
 # created at:24/12/2020 2:42 PM
 # contact: zhyang8-c@my.cityu.edu.hk
 
-from modules.TransformerYZ import TransformerYZ
+from modules.MMTrans import MMTrans
 from modules.TransformerUtils import TransformerUtils as utils
 import tensorflow as tf
 from Dictionary.Dictionary import get_dicts
@@ -17,7 +17,7 @@ import numpy as np
 class Evaluation:
     def __init__(self, sub_data_folder, transformer_args):
         self.sub_data_folder = sub_data_folder
-        self.transformer = TransformerYZ(**transformer_args)
+        self.transformer = MMTrans(**transformer_args)
         self.learning_rate = CustomSchedule(transformer_args['d_model'])
         self.optimizer = tf.keras.optimizers.Adam(self.learning_rate, beta_1=0.9, beta_2=0.98, epsilon=1e-9)
 
@@ -30,7 +30,6 @@ class Evaluation:
         outputs = tf.expand_dims(decoder_input, 1)
         for i in range(MAX_LENGTH_COMM-1):
             src_padding_mask, node_padding_mask, look_ahead_mask = utils.create_masks(srcs_test, nodes_test, outputs)
-            print("look_ahead_mask: ", look_ahead_mask[0])
             predictions, attention_weights, _, _ = self.transformer(srcs_test, nodes_test, edges_test, outputs, False,
                          src_padding_mask, node_padding_mask, look_ahead_mask)
 
@@ -282,8 +281,8 @@ if __name__ == "__main__":
         tf.config.experimental.set_memory_growth(gpu, True)
     # TODO: Remember to change parameters when implement  the evaluation
     evaluation = Evaluation(**Eval_args)
-    # evaluation.evaluate()
+    evaluation.evaluate()
     # evaluation.evaluate_example()
-    evaluation.evaluate_attn(1052)
+    # evaluation.evaluate_attn(1052)
 
 

@@ -5,7 +5,7 @@
 # contact: zhyang8-c@my.cityu.edu.hk
 
 import tensorflow as tf
-from modules.TransformerYZ import TransformerYZ
+from modules.MMTrans import MMTrans
 from modules.CustomSchedule import CustomSchedule
 from modules.TransformerUtils import TransformerUtils as utils
 import time
@@ -23,7 +23,7 @@ class Train:
         self.patience = patience
         self.train_loss = tf.keras.metrics.Mean(name='train_loss')
         self.train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='train_accuracy')
-        self.transformer = TransformerYZ(**transformer_args)
+        self.transformer = MMTrans(**transformer_args)
         self.learning_rate = CustomSchedule(transformer_args['d_model'])
         self.optimizer = tf.keras.optimizers.Adam(self.learning_rate, beta_1=0.9, beta_2=0.98, epsilon=1e-9)
 
