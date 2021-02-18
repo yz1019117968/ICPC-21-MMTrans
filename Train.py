@@ -127,7 +127,7 @@ class Train:
                     print('Epoch {} Batch {} Loss {:.4f} Accuracy {:.4f}'.format(
                       epoch + 1, batch, self.train_loss.result(), self.train_accuracy.result()))
 
-                # evaluate every 250 batches
+                # evaluate every 500 batches
                 if batch % 500 == 0 and batch != 0:
                     bleu_avg_best = self.evaluate(bleu_avg_best, ckpt_manager, epoch, val_set)
                     if self.early_stopping(bleu_avg_bests, bleu_avg_best) is True:
