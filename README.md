@@ -19,3 +19,4 @@
 #### Other useful tools
 
 - The SBT sequences and Graphs (xml format) generation tools are provided [here](https://github.com/yz1019117968/SC_tokenization).
+- The model is implemented by [TensorFlow 2.3](https://www.tensorflow.org/tutorials/text/transformer?hl=zh-cn) based on the Transformer tutorial.
