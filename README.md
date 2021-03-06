@@ -1,6 +1,6 @@
 ### ICPC'21 MMTrans
 
-#### General Introduction for the Whole Framework.
+#### A General Introduction for the Whole Framework.
 
 - data_process: data pre-process.
 - Dictionary: vocabulary related code.
@@ -13,8 +13,10 @@
 
 #### Data and Trained Model
 
-- Dataset Available Here: [dataset](https://zenodo.org/record/4451876#.YD8wJk7isuV)
-- Trained Models: [Models](https://drive.google.com/drive/folders/1VkyISadwA8tp43xhJglqXIoSX3tT33k8?usp=sharing), the program will automatically load the latest model.
+- Dataset is Available Here: [dataset](https://zenodo.org/record/4587089#.YEMmWugzYuU), put the datasets folder under the root directory.
+
+- Trained Models: [Models](https://drive.google.com/drive/folders/1VkyISadwA8tp43xhJglqXIoSX3tT33k8?usp=sharing), put each of the checkpoint folder under the root directory, 
+and the program will automatically load the latest model. (The number behind them is the head number setup of each experiment)
 
 #### Other useful tools
 

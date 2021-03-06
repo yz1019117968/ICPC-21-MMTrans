@@ -126,6 +126,7 @@ def check_dataset():
         data1 = pkl.load(fr1)
     print("val1: ", len(data1['val']))
     print("test: ", len(data1['test']))
+
 if __name__ == "__main__":
     # stat_seqs("smart_contracts/comms_4_20")
     # stat_comm("smart_contracts/comms_4_20")
