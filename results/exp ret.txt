@@ -1,0 +1,96 @@
+Transformer_args = {
+"num_layers": 1,
+"d_model": 256,
+"dff": 512,
+"num_heads": 2,
+"srcs_vocab_size": len(SBTS_DIC.word_index) + 3,
+"graphs_vocab_size": len(NODES_DIC.word_index) + 1,
+"asthop": 2,
+"comms_vocab_size": len(COMMS_DIC.word_index) + 3,
+"pe_srcs":len(SBTS_DIC.word_index) + 3,
+"pe_graphs":len(NODES_DIC.word_index) + 1,
+"pe_comms":len(COMMS_DIC.word_index) + 3,
+"rate": 0.2
+}
+sentence_bleu: 0.2357
+corpus_bleu: 0.2663
+rouge: 0.4345
+meteor: 0.3537
+
+Transformer_args = {
+"num_layers": 1,
+"d_model": 256,
+"dff": 512,
+"num_heads": 4,
+"srcs_vocab_size": len(SBTS_DIC.word_index) + 3,
+"graphs_vocab_size": len(NODES_DIC.word_index) + 1,
+"asthop": 2,
+"comms_vocab_size": len(COMMS_DIC.word_index) + 3,
+"pe_srcs":len(SBTS_DIC.word_index) + 3,
+"pe_graphs":len(NODES_DIC.word_index) + 1,
+"pe_comms":len(COMMS_DIC.word_index) + 3,
+"rate": 0.2
+}
+sentence_bleu: 0.3047
+corpus_bleu: 0.3414
+rouge: 0.5057
+meteor: 0.4324
+
+
+Transformer_args = {
+"num_layers": 1,
+"d_model": 256,
+"dff": 512,
+"num_heads": 8,
+"srcs_vocab_size": len(SBTS_DIC.word_index) + 3,
+"graphs_vocab_size": len(NODES_DIC.word_index) + 1,
+"asthop": 2,
+"comms_vocab_size": len(COMMS_DIC.word_index) + 3,
+"pe_srcs":len(SBTS_DIC.word_index) + 3,
+"pe_graphs":len(NODES_DIC.word_index) + 1,
+"pe_comms":len(COMMS_DIC.word_index) + 3,
+"rate": 0.2
+}
+sentence_bleu: 0.2968
+corpus_bleu: 0.3319
+rouge: 0.5050
+meteor: 0.4326
+
+
+Transformer_args = {
+"num_layers": 1,
+"d_model": 256,
+"dff": 512,
+"num_heads": 16,
+"srcs_vocab_size": len(SBTS_DIC.word_index) + 3,
+"graphs_vocab_size": len(NODES_DIC.word_index) + 1,
+"asthop": 2,
+"comms_vocab_size": len(COMMS_DIC.word_index) + 3,
+"pe_srcs":len(SBTS_DIC.word_index) + 3,
+"pe_graphs":len(NODES_DIC.word_index) + 1,
+"pe_comms":len(COMMS_DIC.word_index) + 3,
+"rate": 0.2
+}
+sentence_bleu: 0.2227
+corpus_bleu: 0.2491
+rouge: 0.4271
+meteor: 0.3438
+
+Transformer_args = {
+"num_layers": 1,
+"d_model": 256,
+"dff": 512,
+"num_heads": 32,
+"srcs_vocab_size": len(SBTS_DIC.word_index) + 3,
+"graphs_vocab_size": len(NODES_DIC.word_index) + 1,
+"asthop": 2,
+"comms_vocab_size": len(COMMS_DIC.word_index) + 3,
+"pe_srcs":len(SBTS_DIC.word_index) + 3,
+"pe_graphs":len(NODES_DIC.word_index) + 1,
+"pe_comms":len(COMMS_DIC.word_index) + 3,
+"rate": 0.2
+}
+sentence_bleu: 0.2697
+corpus_bleu: 0.3041
+rouge: 0.4738
+meteor: 0.3967
