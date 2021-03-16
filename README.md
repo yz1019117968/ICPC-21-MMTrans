@@ -10,6 +10,7 @@
 - Evaluation.py: evaluate the model.
 - EvaluationMetrics.py: automated evaluation metrics adopted in the experiment.
 - Configs.py: model hyper-parameters setup.
+- There's another code repo that won't be maintained :point_right: [Link](https://zenodo.org/record/4452609#.YFB9w50zYuU).
 
 #### Data and Trained Model
 
